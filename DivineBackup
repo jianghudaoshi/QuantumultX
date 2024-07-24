@@ -1,5 +1,3 @@
-# Quantumult X小白配置 制作 by Orz-3 TG频道：t.me/Orzmini 2022/07/26
-
 [general]
 server_check_url=http://cp.cloudflare.com/generate_204
 dns_exclusion_list=*.cmpassport.com, *.jegotrip.com.cn, *.icitymobile.mobi, id6.me
@@ -38,7 +36,8 @@ static=全球加速, 香港节点, 台湾节点, 日本节点, 狮城节点, 美
 static=苹果服务, direct, 香港节点, 台湾节点, 美国节点, 日本节点, 狮城节点, proxy, img-url=https://github.com/jianghudaoshi/QuantumultX/blob/master/icon/Apple.png
 static=港台番剧, direct, 香港节点, 台湾节点, img-url=https://github.com/jianghudaoshi/QuantumultX/blob/master/icon/bilibili.png
 static=国际媒体, 香港节点, 台湾节点, 日本节点, 美国节点, 狮城节点, proxy, img-url=https://github.com/jianghudaoshi/QuantumultX/blob/master/icon/YouTube.png
-static=黑白名单, 全球加速, direct, 香港节点, 台湾节点, 日本节点, 狮城节点, 美国节点, proxy, img-url=https://github.com/jianghudaoshi/QuantumultX/blob/master/icon/Available.png
+# static=黑白名单, 全球加速, direct, 香港节点, 台湾节点, 日本节点, 狮城节点, 美国节点, proxy, img-url=https://github.com/jianghudaoshi/QuantumultX/blob/master/icon/Available.png
+static=特殊节点, server-tag-regex=^(?!.*(港|台|日|韩|坡|美|马|英|HK|US|TW|JP|KR|SG|Hong|Tai|Japan|Korea|Singapore|States|UK|Malaysia)), img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Static.png
 url-latency-benchmark=香港节点, server-tag-regex=(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|美)).)*$, check-interval=600, tolerance=0, img-url=https://github.com/jianghudaoshi/QuantumultX/blob/master/icon/Hong_Kong.png
 url-latency-benchmark=台湾节点, server-tag-regex=(?=.*(台|TW|(?i)Taiwan))^((?!(港|日|韩|新|美)).)*$, check-interval=600, tolerance=0, img-url=https://github.com/jianghudaoshi/QuantumultX/blob/master/icon/Taiwan.png
 url-latency-benchmark=日本节点, server-tag-regex=(?=.*(日|JP|(?i)Japan))^((?!(港|台|韩|新|美)).)*$, check-interval=600, tolerance=0, img-url=https://github.com/jianghudaoshi/QuantumultX/blob/master/icon/Japan.png
@@ -52,44 +51,28 @@ url-latency-benchmark=马来西亚, server-tag-regex=(?=.*(马|MA|(?i)Malaysia))
 https://sub.gt-key.com/app/quantumultx/27342/bk7qWwXD7KHZ, tag=Tag-1665584461, update-interval=172800, opt-parser=true, enabled=true
 
 [filter_remote]
-https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Unbreak.list, tag=规则修正, force-policy=direct, update-interval=172800, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Guard/Advertising.list, tag=广告拦截, force-policy=reject, update-interval=172800, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Guard/AdvertisingPlus.list#type=domain-set, tag=广告拦截, force-policy=reject, update-interval=172800, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/NobyDa/Script/master/Surge/AdRule.list, tag=广告拦截, force-policy=reject, update-interval=172800, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/app2smile/rules/master/rule/tieba-ad-qx.list, tag=贴吧广告, force-policy=reject, update-interval=172800, opt-parser=false, enabled=true
-https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Guard/Hijacking.list, tag=运营劫持, force-policy=reject, update-interval=172800, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Guard/Privacy.list, tag=隐私保护, force-policy=reject, update-interval=172800, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/Video/TikTok.list, tag=海外抖音, force-policy=全球加速, update-interval=172800, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Extra/Google/GoogleVoice.list, tag=Google Voice, force-policy=美国节点, update-interval=172800, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/Region/HK.list, tag=流媒体HK, force-policy=香港节点, update-interval=172800, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/Region/TW.list, tag=流媒体TW, force-policy=台湾节点, update-interval=172800, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/Region/JP.list, tag=流媒体JP, force-policy=日本节点, update-interval=172800, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/Region/US.list, tag=流媒体US, force-policy=美国节点, update-interval=172800, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/Streaming.list, tag=国际媒体, force-policy=国际媒体, update-interval=172800, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/StreamingSE.list, tag=港台番剧, force-policy=港台番剧, update-interval=172800, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Global.list, tag=全球加速, force-policy=全球加速, update-interval=172800, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Extra/Apple/Apple.list, tag=苹果服务, force-policy=苹果服务, update-interval=172800, opt-parser=true, enabled=true
-https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/China.list, tag=国内网站, force-policy=direct, update-interval=172800, opt-parser=true, enabled=true
+# https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Unbreak.list, tag=规则修正, force-policy=direct, update-interval=172800, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/limbopro.com/Adblock4limbo.list, tag=广告拦截, force-policy=reject, update-interval=172800, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/jianghudaoshi/QuantumultX/blob/master/filter_rules/HTTPDNS.Block.list, tag=运营劫持, force-policy=reject, update-interval=172800, opt-parser=true, enabled=true
+# https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Guard/Privacy.list, tag=隐私保护, force-policy=reject, update-interval=172800, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/jianghudaoshi/QuantumultX/blob/master/filter_rules/Streaming.list, tag=国际媒体, force-policy=国际媒体, update-interval=172800, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/jianghudaoshi/QuantumultX/blob/master/filter_rules/StreamingSE.list, tag=港台番剧, force-policy=港台番剧, update-interval=172800, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/jianghudaoshi/QuantumultX/master/filter_rules/Apple.list, tag=苹果服务, force-policy=苹果服务, update-interval=172800, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/jianghudaoshi/QuantumultX/blob/master/filter_rules/ASN.China.list, tag=国内网站, force-policy=direct, update-interval=172800, opt-parser=true, enabled=true
 
 [rewrite_remote]
+https://raw.githubusercontent.com/jianghudaoshi/QuantumultX/blob/master/YouTube_noAD, tag=油管去广告, update-interval=172800, opt-parser=false, enabled=false
 https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/config/QX.snippet, tag=Sub Store, update-interval=172800, opt-parser=false, enabled=false
+https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/StartUp.conf, tag=墨鱼去开屏, update-interval=172800, opt-parser=true, enabled=true
 https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.quanx.conf, tag=BoxJs, update-interval=172800, opt-parser=false, enabled=false
 https://raw.githubusercontent.com/Orz-3/QuantumultX/master/Bili_Auto_Regions.conf, tag=Bilibili换区脚本, update-interval=172800, opt-parser=false, enabled=false
 https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/TestFlightDownload.conf, tag=TestFlight区域限制解除, update-interval=172800, opt-parser=false, enabled=false
 https://raw.githubusercontent.com/Orz-3/QuantumultX/master/TikTok.conf, tag=Tiktok解锁, update-interval=172800, opt-parser=false, enabled=false
-https://raw.githubusercontent.com/Orz-3/QuantumultX/master/Netflix_ratings.conf, tag=Netflix评分, update-interval=172800, opt-parser=false, enabled=false
-https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Rewrite/General.conf, tag=神机重定向, update-interval=172800, opt-parser=false, enabled=false
-https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Rewrite/Block/YouTubeAds.conf, tag=YouTube去广告, update-interval=172800, opt-parser=false, enabled=true
-https://raw.githubusercontent.com/app2smile/rules/master/module/tieba-qx.conf, tag=贴吧去广告, update-interval=172800, opt-parser=false, enabled=false
-https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Rewrite/Block/Advertising.conf, tag=神机去广告, update-interval=172800, opt-parser=true, enabled=false
-https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/Rewrite_lhie1.conf, tag=lhie1去广告, update-interval=172800, opt-parser=false, enabled=false
+
 
 [server_local]
 
 [filter_local]
-host, joplinapp.org, 全球加速
-host, torproject.org, 港台番剧
-host, onionbrowser.com, 港台番剧
 host, nike.com, 美国节点
 host, gspe1-ssl.ls.apple.com, 美国节点
 host-suffix, local, direct
@@ -102,7 +85,7 @@ ip-cidr, 224.0.0.0/4, direct
 ip6-cidr, fe80::/10, direct
 ip-cidr, 203.107.1.1/24, reject
 ip-cidr, 183.240.197.130/32, direct
-final, 黑白名单
+geoip, cn, direct
 
 [rewrite_local]
 ^https?://(www\.)?g\.cn url 302 https://www.google.com
